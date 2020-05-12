@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./global.js"></script>
+  </head>
+  <body>
+    <div class="container h-100 w-100">
+      <div class="left w-20 bg-b h-100">
+        <div class="title h-5 cf">
+          LOGO
+        </div>
+        <div class="information">
+          <div class="wrapper">
+            <div class="card-title">
+              <div class="ib">
+                <input type="text" class="card bg-d mtb-5 p-5" name="Title" id="title" placeholder="Enter card Title">
+              </div>
+              <div class="ib">
+                <input type="button" class="card bg-c mtb-5 p-5 btn" value="Save" id="savebtn">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right w-80 h-100">
+        <div class="header bg-a h-5 plr-10">
+          <div class="cf-space-between h-100-p">
+            <div class="left">
+              <input class="card  bg-b border  p-2" type="text" name="search" id="search">
+            </div>
+            <div class="right">
+              Profile
+            </div>
+          </div>
+          
+        </div>
+        <div class="body">
+          <div class="canvas-wrapper" id="canvas-wrapper">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./objects.js"></script>
+    <script src="./menu.js"></script>
+    <script src="./card.js"></script>
+    <script src="./path.js"></script>
+    <script src="./main.js"></script>
+    <script src="./grid.js"></script>
+  </body>
+</html>
