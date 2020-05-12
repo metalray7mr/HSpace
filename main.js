@@ -8,11 +8,6 @@ function setup() {
     background(220);
     g= new grid();
 
-    g.addCard(ax,ay,"Ram");
-    g.addCard(bx,by,"Mohan");
-    g.addCard(cx,cy,"Pratap");
-    g.addCard(dx,dy,"Json");
-     g.addPath(g.cards[0],g.cards[1],3)
     // g.addPath(g.cards[1],g.cards[2],4)
     // g.addPath(g.cards[1],g.cards[3],3)
 
@@ -73,6 +68,14 @@ function mouseReleased() {
         renderProperties();
     }else if((ReleasedX<CartisianWidth && ReleasedX>0 && ReleasedY>0 && ReleasedY<CartisianHeight)){
         SELECTEDOBJECT=-1
+    }
+
+
+
+    //add new card
+
+    if(NEWCLICKED===1){
+        g.addCard(ReleasedX,ReleasedY);
     }
     selectedNode=-1;
     
