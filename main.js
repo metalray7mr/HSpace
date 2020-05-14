@@ -20,10 +20,17 @@ function draw() {
     g.drawCards();
     g.drawPaths();
 
-    g.drawMenu()
+
+    //draw temp items
     if(tp){
         g.tempPath(clickedX,clickedY,mouseX,mouseY,selectedNode)
     }
+    if(tempCard){
+        g.tempCard()
+    }
+
+
+    g.drawMenu()
 
     // console.log(SELECTEDOBJECT,RELEASEDOBJECT,selectedNode);
     if(selectedNode!=-1 && RELEASEDOBJECT!=-1 && SELECTEDOBJECT!=-1 && SELECTEDOBJECT!=RELEASEDOBJECT){
@@ -49,6 +56,14 @@ function mouseDragged() {
 function mousePressed() {
     clickedX=mouseX;
     clickedY=mouseY;
+
+    if(g.menu.selected){
+        console.log("yes")
+        tempCard=true;
+    }else{
+        tempCard=false;
+
+    }
    
 }
 
@@ -74,8 +89,12 @@ function mouseReleased() {
 
     //add new card
 
-    if(NEWCLICKED===1){
-        g.addCard(ReleasedX,ReleasedY);
+    if(g.menu.selected){
+        tempCard=false;
+        g.addCard(ReleasedX-CARDWIDTH/2,ReleasedY-CARDHEIGHT/2);
+    }else{
+        tempCard=false;
+
     }
     selectedNode=-1;
     

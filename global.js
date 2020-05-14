@@ -2,12 +2,13 @@ const NODE=6;
 
 
 
-CartisianWidth=720;
-CartisianHeight=700;
+CartisianWidth=document.getElementById("canvas-wrapper").clientWidth;
+CartisianHeight=document.getElementById("canvas-wrapper").clientHeight;
 dragX=0;
 dragY=0;
 
 var tp=false;
+var tempCard=false;
 selectedNode=-1;
 
 SELECTEDOBJECT=-1;
@@ -15,19 +16,9 @@ HOVEROBJECT=-1;
 SELECTEDOBJECTTYPE=-1;
 RELEASEDOBJECT=-1;
 
-NEWCLICKED=-1;
 
-ax=263;
-ay=58;
-bx=276;
-by=248;
-
-cx=432;
-cy=430;
-
-dx=136;
-dy=404;
-
+CARDWIDTH=100;
+CARDHEIGHT=70;
 
 var g;
 var a;

@@ -33,7 +33,15 @@ body{
 }
 
 .ib{
-    display: inline;
+    padding: 10px 0px;
+}
+
+.h{
+    margin: 0px;
+}
+.avtar-list{
+    height: 330px;
+    overflow: scroll;
 }
 .card{
     border: none;
@@ -59,6 +67,13 @@ body{
 }
 
 
+.avtar{
+    height: 50px;
+    transition: 0.3s ease-in-out;
+}
+.avtar:hover{
+    transform: scale(1.1);
+}
 /*width*/
 
 .w-20{

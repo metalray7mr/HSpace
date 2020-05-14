@@ -84,6 +84,11 @@ class grid{
         }
     }
     
+    tempCard(){
+        fill(244, 122, 158);
+        rect(mouseX-CARDWIDTH/2,mouseY-CARDHEIGHT/2, CARDWIDTH, CARDHEIGHT);
+
+    }
     tempPath(x1,y1,x2,y2,type){
         noFill()
         stroke(0, 102, 153);
